@@ -49,7 +49,16 @@
         <section class="hero-section">
             <div class="container">
                 <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-                <button type="button" class="button button-primary">Замовити послугу</button>
+                <button type="button" class="button button-primary" data-modal-open>Замовити послугу</button>
+            </div>
+            <div class="modal-overlay is-hidden" data-modal>
+                <div class="modal-box">
+                    <button class="modal-close" data-modal-close>
+                        <svg class="close-icon">
+                            <use href="./images/svg/sprite.svg#close"></use>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </section>
         <section class="bullets-section section">
@@ -107,15 +116,15 @@
                 <ul class="services">
                     <li class="services-item"><img class="services-img" src="./images/computer.jpg" alt="Компьютер"
                             width="370">
-                            <p class="services-description">Десктопні додатки</p>
-                        </li>
+                        <p class="services-description">Десктопні додатки</p>
+                    </li>
                     <li class="services-item"><img class="services-img" src="./images/mobile.jpg"
                             alt="Мобільний телефон" width="370">
-                            <p class="services-description">Мобільні додатки</p>
-                        </li>
+                        <p class="services-description">Мобільні додатки</p>
+                    </li>
                     <li class="services-item"><img class="services-img" src="./images/tablet.jpg" alt="Планшет"
                             width="370">
-                            <p class="services-description">Дизайнерські рішення</p>
+                        <p class="services-description">Дизайнерські рішення</p>
                     </li>
                 </ul>
             </div>
