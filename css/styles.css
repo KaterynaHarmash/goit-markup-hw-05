@@ -629,6 +629,7 @@ header {
     right: 0;
     left: 0;
     z-index: 2;
+    visibility: visible;
 
     display: flex;
     justify-content: center;
@@ -637,23 +638,30 @@ header {
     background: rgba(0, 0, 0, 0.20);
     opacity: 1;
     pointer-events: all;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-hidden {
     opacity: 0;
     pointer-events: none;
+    visibility: collapse;
 }
 
 .modal-box {
     position: relative;
-
+    transform: scale(1);
+    
     width: 528px;
     height: 581px;
 
     background-color: var(--primary-bg-color);
     border-radius: 4px;
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-hidden>.modal-box {
+    transform: scale(0);
 }
 
 .modal-close {
